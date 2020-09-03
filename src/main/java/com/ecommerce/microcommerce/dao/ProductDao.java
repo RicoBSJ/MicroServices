@@ -8,7 +8,7 @@ public interface ProductDao {
 
     public List<Product> finAll();
 
-    public Product findById();
+    public Product findById(int id);
 
     public Product save(Product product);
 }

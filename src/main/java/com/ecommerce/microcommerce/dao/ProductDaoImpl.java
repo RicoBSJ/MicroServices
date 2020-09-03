@@ -23,12 +23,18 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Product findById() {
+    public Product findById(int id) {
+        for (Product product : products) {
+            if (product.getId() == id){
+                return product;
+            }
+        }
         return null;
     }
 
     @Override
     public Product save(Product product) {
+        products.add(product);
         return null;
     }
 }
