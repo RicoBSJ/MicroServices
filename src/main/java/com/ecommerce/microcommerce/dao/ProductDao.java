@@ -6,9 +6,10 @@ import java.util.List;
 
 public interface ProductDao {
 
-    public List<Product> finAll();
 
-    public Product findById(int id);
+    List<Product> finAll();
 
-    public Product save(Product product);
+    Product findById(int id);
+
+    Product save(Product product);
 }
