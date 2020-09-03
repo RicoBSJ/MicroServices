@@ -28,7 +28,7 @@ public class ProductController {
         return product;
     }
 
-    @PostMapping(name = "/Produits")
+    @PostMapping(value = "/Produits")
     public void ajouterProduit(@RequestBody Product product) {
 
         productDao.save(product);

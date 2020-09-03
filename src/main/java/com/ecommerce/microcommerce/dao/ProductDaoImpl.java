@@ -35,6 +35,6 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public Product save(Product product) {
         products.add(product);
-        return null;
+        return product;
     }
 }
