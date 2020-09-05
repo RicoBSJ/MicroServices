@@ -23,9 +23,7 @@ public class ProductController {
     @GetMapping(value = "Produits/{id}")
     public Product afficherUnProduit(@PathVariable int id){
 
-        Product product = new Product(id, new String("aspirateur"), 100);
-
-        return product;
+        return productDao.findById(id);
     }
 
     @PostMapping(value = "/Produits")
