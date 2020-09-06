@@ -3,9 +3,15 @@ package com.ecommerce.microcommerce.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(value = {"prixAchat", "id"})
-public class Product {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+//@JsonIgnoreProperties(value = {"prixAchat", "id"})
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue
     private int id;
     private String nom;
     private int prix;

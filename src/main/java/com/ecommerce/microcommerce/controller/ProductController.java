@@ -19,7 +19,7 @@ public class ProductController {
     //Produits
     @GetMapping(value = "Produits")
     public List<Product> listeProduits(){
-        return productDao.finAll();
+        return productDao.findAll();
     }
 
     //Produits/{id}
@@ -43,5 +43,11 @@ public class ProductController {
                 .toUri();
 
         return ResponseEntity.created(location).build();
+    }
+
+    @GetMapping(value = "test/produits/{prixLimit}")
+    public List<Product> testDeRequetes(@PathVariable int prixLimit){
+
+        return productDao.chercherUnProduitCher(prixLimit);
     }
 }
